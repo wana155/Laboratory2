@@ -1,21 +1,21 @@
  #!/bin/sh
 
-echo "#include “./MyClass.hh”
+echo "#include “./$1.hh”
 
-MyClass::MyClass()
+$1::$1()
 {}
 
-MyClass::~MyClass()
+$1::~$1()
 {}" > $1.cc
 
-echo "#ifndef MyClass_hh
-#define MyClass_hh
+echo "#ifndef $1_hh
+#define $1_hh
 
-class MyClass
+class $1
 {
   public:
-    MyClass();
-    ~MyClass();
+    $1();
+    ~$1();
 
   private:
 };
